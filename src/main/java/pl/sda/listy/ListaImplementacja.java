@@ -1,28 +1,37 @@
 package pl.sda.listy;
 
-import java.util.List;
+import java.util.Arrays;
 
 public class ListaImplementacja implements Lista {
 
     private int [] liczby;
     private int pojemnosc = 10;
-    private int rozmiar;
+    private int rozmiar = 0;
 
-    ListaImplementacja(){
+    ListaImplementacja() {
         this.liczby = new int[this.pojemnosc];
     }
+    // konstruktor bezparametrowy
 
     ListaImplementacja(int pojemnosc){
         this.liczby = new int[pojemnosc];
     }
+    // konstruktor, który przyjmuje parametr int
 
     @Override
     public void dodajElement(int liczba) {
+        if (this.rozmiar == this.pojemnosc) {
+            System.out.println("PELNA TABLICA");
+            this.liczby = Arrays.copyOf(this.liczby, this.liczby.length * 2);
+            this.pojemnosc = this.liczby.length;
+        }
 
+        this.liczby[rozmiar] = liczba;
+        rozmiar++;
     }
 
     @Override
-    public int znajdz(int liczba) {
+    public int znajdz (int liczba) {
         return 0;
     }
 
@@ -37,12 +46,13 @@ public class ListaImplementacja implements Lista {
     }
 
     @Override
-    public void usunPowtorzenia() {
-
-    }
+    public void usunPowtorzenia() {    }
 
     @Override
-    public void zapiszDoPliku(String plik) {
+    public void zapiszDoPliku(String plik) {    }
 
+    @Override
+    public String toString() {
+        return Arrays.toString(this.liczby);
     }
 }

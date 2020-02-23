@@ -1,8 +1,5 @@
 package pl.sda.listy;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -12,21 +9,12 @@ public class Main {
         // ListaImplementacja lista = new ListaImplementacja();
 
         lista.dodajElement(212);
+        lista.dodajElement(23);
+        lista.dodajElement(647);
+        lista.dodajElement(2458);
+        lista.dodajElement(58);
+        lista.dodajElement(69);
 
+        System.out.println(lista);
     }
 }
-
-
-
-
-
-
-
-
-        //int tab[] = new int[100];
-
-        //List<Integer> list = new ArrayList<Integer>();
-        //list.add(21);
-        //list.add(222);
-        //list.add(12312);
-        //list.add(332);

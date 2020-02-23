@@ -32,8 +32,13 @@ public class ListaImplementacja implements Lista {
 
     @Override
     public int znajdz (int liczba) {
-        return 0;
+            return 0;
     }
+
+
+
+
+
 
     @Override
     public String pisz() {
